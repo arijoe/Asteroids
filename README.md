@@ -1,36 +1,30 @@
 ## Asteroids
-An HTML5 Canvas browser game that gives you, the player, the thrill of drifting through an infinite asteroid field that is becoming increasingly hostile to life armed with only five regenerating bullets for self-defense.
+[Live](http://ariweitzman.com/asteroids)
+
+An browser game that gives you, the player, the thrill of drifting aimlessly in cold and lifeless space, through an infinite asteroid field that is becoming increasingly unnavigable, armed with only five regenerating bullets and an upbeat attitude for self-preservation.
 
 ## Dependencies
-This project requires the [colorize gem](https://github.com/fazibear/colorize) to render from the command line. Otherwise, all the game requires to play is a working command line, ruby version 2.1 or higher, and two players.
+This project requires a modern browser supporting HTML5 and canvas, a keyboard, and a minimum of one phelange. Libraries required in development were [jquery](https://github.com/jquery/jquery) for some information rendering, [keymaster](https://github.com/madrobby/keymaster) to bind game controls, [keymaster.sequence](https://github.com/chevalric/keymaster-sequence) for a few easter-egg--both incorporated and ultimately tossed aside, and lastly [Goggle Fonts](https://github.com/jquery/jquery) for the beautiful text-rendering. The game logic is written in javascript.
 
-## How to Use
-To begin a game, clone the repo and navigate to its path in your terminal window. First, you'll need to install the colorize gem, which is done simply:
-```linux
-$ gem install colorize
-```
+## How to Play
+Key/Sequence | Action
+-------------|-------
+Left         | Accelerate Left
+Right        | Accelerate Right
+Up           | Accelerate Up
+Down         | Take a Guess
+Spacebar / w | Fire bullet
+Number Keys  | Jump to Level (single-digit only)
+'a', 'b'     | Jump to Level 19 with 19 lives
 
-Then to load the game in your terminal, type:
-```linux
-$ ruby index.rb
-```
+## Features
+Every feature of this project is personally calculated, coded, or drawn.
+- Ship, bullet, asteroid, and star animations were all written with canvas-rendering operations.
+- Trajectories are calculated using vector math.
+- Data-preservation and rendering are handled with javascript and backbone.
+- Style and scaling are all handled with good old css.
 
-Choose a name for each player and then begin playing! Moves take the format of "start move-end move" (i.e. "A2-A4").
+---------------------
 
-The game also allows users to save one board state for future use. To save a game state at any time, when prompted for a move just type "save":
-```linux
-A (white): Enter start and end position, divided by a dash: save
-```
-To load a previously saved board, type "load":
-```linux
-T (black): Enter start and end position, divided by a dash: load
-```
 
-## Technologies
-This rendition of Chess is written entirely in Ruby. To add color to the board, we employed the colorize gem.
-
-To simplify movement among the pieces, we created a base Piece class from which all other pieces inherited. This allowed us to avoid redundancy in our code, keep our code dry, and avoid redundancy in our code.
-
-In order to evaluate whether a move is valid or not, the program simulates future board states based on the proposed move. If the move would put the moving player in check, or does not obey the rules of movement for the moving piece, we reject the move. To accomplish the future board simulation, we deep dup the board and raise an error to alert the user that the proposed move is not a valid one.
-
-To save board states, we used YAML. The program converts the Board's grid attribute object to YAML and saves it as a text file. When the user loads a game, the program reconstitutes this grid from YAML and passes it to the Game instance.
+*Created 2015 by Ari Weitzman*
