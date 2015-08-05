@@ -1,0 +1,93 @@
+canvas {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+}
+
+html, body, h2, h4, ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: sans-serif;
+}
+
+body {
+  background: #000;
+  margin: 0;
+}
+
+h2, h4, ul {
+  display: block;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  color: #32ffaa;
+  font-family: 'Dosis';
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-size: 48px;
+  letter-spacing: 20px;
+  margin: 0;
+}
+
+.level-container {
+  position: relative;
+  z-index: 2;
+}
+
+h4 {
+  position: absolute;
+  top: 8px;
+  font-size: 14px;
+  margin: 0 0 0 calc(11%)
+}
+
+.game-stats {
+  font-size: 32px;
+  min-width: 400px;
+  margin: 10px calc(10%);
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.lives {
+  float: left;
+}
+
+.score {
+  float: right;
+}
+
+.lives-num, .score-num, .level-num {
+  color: red;
+}
+
+.how-to {
+  margin: 0 auto;
+  display: relative;
+  text-align: left;
+  min-width: 600px;
+}
+
+.how-to > li {
+  font-size: 24px;
+  display: block;
+  color: #fff;
+}
+
+.info {
+  float: right;
+  text-align: right;
+  margin-left: 50px;
+}

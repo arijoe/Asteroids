@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asteroids</title>
+    <link href='http://fonts.googleapis.com/css?family=Dosis&effect=anaglyph' rel='stylesheet' type='text/css'>
+    <link href='./assets/stylesheet.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <h2 class="font-effect-anaglyph">ASTEROIDS</h2>
+
+    <div class="level-container">
+      <h4 class="level">LEVEL: <span class="level-num">1</h4>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <ul class="game-stats group">
+      <li class="lives">LIVES: <span class="lives-num">3</li>
+      <li class="score">SCORE: <span class="score-num">0</li>
+    </ul>
+
+    <ul class="how-to">
+      <li>MOVE:    <span class="info">arrow keys</span></li>
+      <li>ROTATE:  <span class="info">'a' and 'd'</span></li>
+      <li>SHOOT:   <span class="info">'spacebar' or 'w'</span></li>
+      <li>PAUSE:   <span class="info">'p'; at any time</span></li>
+      <li>RESTART: <span class="info">'r'; at any time</span></li>
+      <li>EASTER-EGGS: <span class="info">happy hunting</span></li>
+    </ul>
+  </body>
+
+  <script src="lib/keymaster.js"></script>
+  <script src="lib/keymaster.sequence.js"></script>
+  <script src="lib/jquery-2.1.1.js"></script>
+  <script src="lib/stars.js"></script>
+  <script src="lib/movingObject.js"></script>
+  <script src="lib/utils.js"></script>
+  <script src="lib/asteroid.js"></script>
+  <script src="lib/ship.js"></script>
+  <script src="lib/bullet.js"></script>
+  <script src="lib/game.js"></script>
+  <script src="lib/gameView.js"></script>
+
+  <script>
+    var canvasEl = document.getElementById("game-canvas");
+    canvasEl.width = 1000;
+    canvasEl.height = 600;
+    var ctx = canvasEl.getContext("2d");
+    var Game = new Asteroids.Game(ctx);
+    new Asteroids.GameView(Game, ctx).start();
+  </script>
+</html>
