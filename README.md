@@ -13,7 +13,9 @@ Left         | Accelerate Left
 Right        | Accelerate Right
 Up           | Accelerate Up
 Down         | Take a Guess
-Spacebar / w | Fire bullet
+Spacebar / 'w' | Fire bullet
+'r'          | Restart game, at any time
+'p'          | Pause/play
 Number Keys  | Jump to Level (single-digit only)
 'a', 'b'     | Jump to Level 19 with 19 lives
 
